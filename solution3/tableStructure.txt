@@ -1,0 +1,46 @@
+
+Vehicle table
+
+Id(pk)
+Model
+Plate number
+
+
+Drive table
+
+Id(pk)
+Vehicle_id(fk)
+Date
+Distance
+
+
+Person table
+
+Id(pk)
+Name
+
+
+Student table
+
+Id(pk)
+person_id(fk)
+Student number
+
+
+Professor table
+
+Id(pk)
+person_id(fk)
+Salary
+
+
+Address table
+
+Id (pk)
+person_id(fk)
+Street
+City
+Country
+
+Note: pk= primary key, fk = foreign key
+   

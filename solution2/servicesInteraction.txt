@@ -1,0 +1,31 @@
+// 1. Services Interaction
+
+1.RESTful API Endpoint Integration
+In  RESTful endpoints is typically implemented when a microservice needs to call another and receive response.
+Pros:
+1.low latency between calls that are routed from one microservice to another directly
+Cons:
+Increases development time
+Increases system complexity
+Need to manage client-side error handling
+
+Use cases:
+This is the most preferred integration on because of ease. For example the Service A can just use the HttpClient class to call the GET endpoint of Service B.
+
+2.RPC / gRPC Integration
+gRPC is a framework that allows to implement a remote procedure call (RPC) integration pattern for communication between microservices.
+Pros:
+1.better latency and high throughput
+Cons:
+2.tight coupling
+Use cases:
+RPC is suitable for cases where the client initiating the request must wait for a response.
+
+3.Messaging Integration
+the messaging pattern allows microservices to communicate with each other indirectly. Communication passes through a message bus component.
+Pros:
+1.better separation of concerns
+Cons:
+if the service bus component fails, the application will stop working. Service bus must be highly available so as not to be a single point of failure
+Use cases:
+Messaging integration pattern suitable for asynchronous (fire-and-forget) communication, where the microservice needs to send a message and not wait for a response from the receivers.
